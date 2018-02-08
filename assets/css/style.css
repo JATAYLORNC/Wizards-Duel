@@ -57,3 +57,7 @@ h2 {
 #pharry:hover, #pron:hover, #phermione:hover, #pdraco:hover, #pbellatrix:hover, #pvoldemort:hover {
     transform: scale(1.02);
 }
+
+#msg1, #msg2 {
+    color: #ffffff;
+}

@@ -31,8 +31,17 @@ $(document).ready(function(){
     //charGameAP
     var charGameAP;
 
+    //charAP
+    var charAP;
+
     //defenderGameCAP
     var defenderGameCAP;
+
+    //for decrement of defender HP on display
+    var charHPID;
+
+    //for derement of HP on display
+    var defHPID;
     
 //function to clear display and reset variables when "Restart" button is clicked
 
@@ -49,9 +58,13 @@ $(document).ready(function(){
             //assign value "name" to myCharacter
             myCharacter= characters[0].name;
 
+            //assign value to charHPID
+            charHPID = "#p2";
+
             //assign game attackPower and healthPoint values for myCharacter
             charGameHP = characters[0].healthPoints;
             charGameAP = characters[0].attackPower;
+            charAP = characters[0].attackPower;
 
             //move character to "Your Character" section
             var $pron = $("#pron").detach();
@@ -66,16 +79,28 @@ $(document).ready(function(){
             //move remaining characters to "Enemies Available to Attack" section
             var $characters = $("#characters").detach();
             $("#enemy").append($characters);
+
+            //change div box background to red and border to black
             $("#characters").children().css({"background-color": "red", "border-color": "black"});
             
             
             if(myCharacter != "Ron") {
+
+                //assign value "name" to defender
                 defender = characters[0].name;
+
+                //assign value to defHPID
+                defHPID = "#p2";
+
+                //assign game counterAttackPower and healthPoint values for Defender
                 defenderGameHP = characters[0].healthPoints;
                 defenderGameCAP = characters[0].counterAttackPower;
 
                 var $pron = $("#pron").detach();
                 $("#defender").append($pron);
+
+                //change div box background to black and border to green
+                $("#pron").css({"background-color": "black", "border-color": "green"});
 
                 isDefender = false;
             }
@@ -84,19 +109,18 @@ $(document).ready(function(){
 
     $("#pharry").click(function() {  
 
-        console.log(myCharacter);
-        console.log(isMyCharacter);
-        console.log(isDefender);
-
-
         if(isMyCharacter == true && isDefender == false) {
             
             //assign value "name" to myCharacter
             myCharacter= characters[1].name;
 
+            //assign value to charHPID
+            charHPID = "#p4";
+
             //assign game attackPower and healthPoint values for myCharacter
             charGameHP = characters[1].healthPoints;
             charGameAP = characters[1].attackPower;
+            charAP = characters[1].attackPower;
 
             //move character to "Your Character" section
             var $pharry = $("#pharry").detach();
@@ -112,15 +136,29 @@ $(document).ready(function(){
             //move remaining characters to "Enemies Available to Attack" section
             var $characters = $("#characters").detach();
             $("#enemy").append($characters);
+
+            //change div box background to red and border to black
+            $("#characters").children().css({"background-color": "red", "border-color": "black"});
+            
             
             
             if(myCharacter != "Harry") {
+
+                //assign value "name" to defender
                 defender = characters[1].name;
+
+                //assign value to defHPID
+                defHPID = "#p4";
+
+                //define game counterAttackPower and healthPoint values for Defender
                 defenderGameHP = characters[1].healthPoints;
                 defenderGameCAP = characters[1].counterAttackPower;
 
                 var $pharry = $("#pharry").detach();
                 $("#defender").append($pharry);
+
+                //change div box background to black and border to green
+                $("#pharry").css({"background-color": "black", "border-color": "green"});
 
                 isDefender = false;
             }         
@@ -129,14 +167,18 @@ $(document).ready(function(){
 
     $("#phermione").click(function() {
  
-        if(isMyCharacter == true) {
+        if(isMyCharacter == true && isDefender == false) {
 
             //assign value "name" to myCharacter
             myCharacter= characters[2].name;
 
+            //assign value to charHPID
+            charHPID = "#p6";
+
             //assign game attackPower and healthPoint values for myCharacter
             charGameHP = characters[2].healthPoints;
             charGameAP = characters[2].attackPower;
+            charAP = characters[2].attackPower;
 
             //move character to "Your Character" section
             var $phermione = $("#phermione").detach();
@@ -147,20 +189,34 @@ $(document).ready(function(){
 
         }
 
-        if(isDefender == true) {
+        if(isDefender == true && isMyCharacter == false) {
 
             //move remaining characters to "Enemies Available to Attack" section
             var $characters = $("#characters").detach();
             $("#enemy").append($characters);
+
+            //change div box background to red and border to black
+            $("#characters").children().css({"background-color": "red", "border-color": "black"});
+            
             
             
             if(myCharacter != "Hermione") {
+
+                //assign value "name" to defender
                 defender = characters[2].name;
+
+                //assign value to defHPID
+                defHPID = "#p6";
+
+                //define game counterAttackPower and healthPoint values for Defender
                 defenderGameHP = characters[2].healthPoints;
                 defenderGameCAP = characters[2].counterAttackPower;
 
                 var $phermione = $("#phermione").detach();
                 $("#defender").append($phermione);
+
+                //change div box background to black and border to green
+                $("#phermione").css({"background-color": "black", "border-color": "green"});
 
                 isDefender = false;
             }
@@ -169,14 +225,18 @@ $(document).ready(function(){
 
     $("#pdraco").click(function() {
  
-        if(isMyCharacter == true) {
+        if(isMyCharacter == true && isDefender == false) {
 
             //assign value "name" to myCharacter
             myCharacter= characters[3].name;
 
+            //assign value to charHPID
+            charHPID = "#p8";
+
             //assign game attackPower and healthPoint values for myCharacter
             charGameHP = characters[3].healthPoints;
             charGameAP = characters[3].attackPower;
+            charAP = characters[3].attackPower;
 
             //move character to "Your Character" section
             var $pdraco = $("#pdraco").detach();
@@ -187,20 +247,34 @@ $(document).ready(function(){
 
         }
 
-        if(isDefender == true) {
+        if(isDefender == true && isMyCharacter == false) {
 
             //move remaining characters to "Enemies Available to Attack" section
             var $characters = $("#characters").detach();
             $("#enemy").append($characters);
+
+            //change div box background to red and border to black
+            $("#characters").children().css({"background-color": "red", "border-color": "black"});
+            
             
             
             if(myCharacter != "Draco") {
+
+                //assign value "name" to defender
                 defender = characters[3].name;
+
+                //assign value to defHPID
+                defHPID = "#p8";
+
+                //define game counterAttackPower and healthPoint values for Defender
                 defenderGameHP = characters[3].healthPoints;
                 defenderGameCAP = characters[3].counterAttackPower;
 
                 var $pdraco = $("#pdraco").detach();
                 $("#defender").append($pdraco);
+
+                //change div box background to black and border to green
+                $("#pdraco").css({"background-color": "black", "border-color": "green"});
 
                 isDefender = false;
             }
@@ -209,14 +283,18 @@ $(document).ready(function(){
 
     $("#pbellatrix").click(function() {
   
-        if(isMyCharacter == true) {
+        if(isMyCharacter == true && isDefender == false) {
 
             //assign value "name" to myCharacter
             myCharacter= characters[4].name;
 
+            //assign value to charHPID
+            charHPID = "#p10";
+
             //assign game attackPower and healthPoint values for myCharacter
             charGameHP = characters[4].healthPoints;
             charGameAP = characters[4].attackPower;
+            charAP = characters[4].attackPower;
 
             //move character to "Your Character" section
             var $pbellatrix = $("#pbellatrix").detach();
@@ -226,20 +304,34 @@ $(document).ready(function(){
             isDefender = true;
         }
 
-        if(isDefender == true) {
+        if(isDefender == true && isMyCharacter == false) {
 
             //move remaining characters to "Enemies Available to Attack" section
             var $characters = $("#characters").detach();
             $("#enemy").append($characters);
+
+            //change div box background to red and border to black
+            $("#characters").children().css({"background-color": "red", "border-color": "black"});
+            
             
             
             if(myCharacter != "Bellatrix") {
+
+                //assign value "name" to defender
                 defender = characters[4].name;
+
+                //assign value to defHPID
+                defHPID = "#p10";
+
+                //define game counterAttackPower and healthPoint values for Defender
                 defenderGameHP = characters[4].healthPoints;
                 defenderGameCAP = characters[4].counterAttackPower;
 
                 var $pbellatrix = $("#pbellatrix").detach();
                 $("#defender").append($pbellatrix);
+
+                //change div box background to black and border to green
+                $("#pbellatrix").css({"background-color": "black", "border-color": "green"});
 
                 isDefender = false;
             }
@@ -248,14 +340,18 @@ $(document).ready(function(){
 
     $("#pvoldemort").click(function() {
   
-        if(isMyCharacter == true) {
+        if(isMyCharacter == true && isDefender == false) {
 
             //assign value "name" to myCharacter
             myCharacter= characters[5].name;
 
+            //assign value to charHPID
+            charHPID = "#p12";
+
             //assign game attackPower and healthPoint values for myCharacter
             charGameHP = characters[5].healthPoints;
             charGameAP = characters[5].attackPower;
+            charAP = characters[5].attackPower;
 
             //move character to "Your Character" section
             var $pvoldemort = $("#pvoldemort").detach();
@@ -265,20 +361,32 @@ $(document).ready(function(){
             isDefender = true;
         }
 
-        if(isDefender == true) {
+        if(isDefender == true && isMyCharacter == false) {
 
             //move remaining characters to "Enemies Available to Attack" section
             var $characters = $("#characters").detach();
             $("#enemy").append($characters);
-            
+
+            //change div box background to red and border to black
+            $("#characters").children().css({"background-color": "red", "border-color": "black"});
             
             if(myCharacter != "Voldemort") {
+
+                //assign value "name" to defender
                 defender = characters[5].name;
+
+                //assign value to defHPID
+                defHPID = "#p12";
+
+                //define game counterAttackPower and healthPoint values for Defender
                 defenderGameHP = characters[5].healthPoints;
                 defenderGameCAP = characters[5].counterAttackPower;
 
                 var $pvoldemort = $("#pvoldemort").detach();
                 $("#defender").append($pvoldemort);
+
+                //change div box background to black and border to green
+                $("#pvoldemort").css({"background-color": "black", "border-color": "green"});
 
                 isDefender = false;
             }
@@ -286,24 +394,50 @@ $(document).ready(function(){
     });
         
 
-        
-        
-        //change div box background to red and border to black
-
-    //click function for selection of "Enemy"
-
-        //if isDefender == true;  then defender = "character name"
-        //define game counterAttackPower and healthPoint values for Defender
-        //set isDefender=false;
-
-        //move Enemy to "Defender" section
-        //change div box background to black and border to green
-        //Initiate "Counter Attack Power" and "Health Point" values for "Defender"
-
-
     //click function for attack button
+    $("#attack").click(function (){
 
-    //conditional statement for end of battle  if(charGameHP <= 0 ) then game is over
+        $("#msg1").text("You attacked " + defender  + " for " + charGameAP + " damage.");
+        $("#msg2").text(defender + " attacked you back for " + defenderGameCAP + " damage.");
+
+        if(charGameHP > 0 && defenderGameHP > 0) {
+
+            console.log(charGameAP)
+            charGameHP = charGameHP - defenderGameCAP;
+
+            console.log(charGameHP);
+
+            $(charHPID).text(charGameHP);
+
+            defenderGameHP = defenderGameHP - charGameAP;
+            $(defHPID).text(defenderGameHP);
+            charGameAP = charGameAP + charAP;
+
+            
+
+            //conditional statement for end of battle  if(charGameHP <= 0 ) then game is over
+            if(charGameHP <= 0) {
+
+            }
+
+
+
+
+
+
+
+        }
+
+
+
+
+    });
+
+
+
+    
+
+    
         //message:  You have been defeated...GAME OVER!!!
         //display Restart button
 
