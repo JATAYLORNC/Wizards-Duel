@@ -12,6 +12,9 @@
     
         <!--link to custom stylesheet-->
         <link rel="stylesheet" typ ="text/css" href="assets/css/style.css">
+
+        <!-- Added link to the jQuery Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
         <!--link to javascript file-->
         <script src="assets/javascript/game.js"></script>
@@ -31,8 +34,10 @@
         <div class="row">
             <div class="col-sm-12">
 
+                <div class="container-fluid" id="characters">
+
                     <div id="pron">
-                        <img id="ron" src="assets/images/ron_75x75.png" alt="Ron Weasley">
+                        <div><img id="ron" src="assets/images/ron_75x75.png" alt="Ron Weasley"></div>
                         <div id="p1">Ron Weasley</div>
                         <div id="p2">100</div>
                     </div>
@@ -52,22 +57,22 @@
                     <div id="pdraco">
                             <img id="draco" src="assets/images/draco_75x75.png" alt="Draco Malfoy">
                             <div id="p7">Draco Malfoy</div>
-                            <div id="p8">120</div>
+                            <div id="p8">100</div>
                     </div>
 
-                    <div id="phermione">
+                    <div id="pbellatrix">
                             <img id="bellatrix" src="assets/images/bellatrix_75x75.png" alt="Bellatrix LeStrange">
                             <div id="p9">Bellatrix LeStrange</div>
-                            <div id="p10">120</div>
+                            <div id="p10">150</div>
                     </div>
 
                     <div id="pvoldemort">
                             <img id="voldemort" src="assets/images/voldemort2_75x75.png" alt="Lord Vodemort">
                             <div id="p11">Lord Voldemort</div>
-                            <div id="p12">120</div>
+                            <div id="p12">180</div>
                     </div>
                     
-                    
+                </div>    
                     
             </div>
         </div>
@@ -78,7 +83,7 @@
                     <div >
                         <h2>Your Character</h2>
                     </div>
-                    <div id="yChar"></div>
+                    <div id="myChar"></div>
                 </div>
             </div>
         </div>
