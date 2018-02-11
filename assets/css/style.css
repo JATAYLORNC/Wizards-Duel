@@ -65,7 +65,28 @@ h2 {
     color: #ffffff;
 }
 
-@media screen and (min-width: 641px) and (max-width: 667px) {
+@media screen and (min-width: 768px) and (max-width: 980px) {
+
+    body {
+        background-image: url("../images/hogwartst.png");
+        background-size: cover;
+    }
+
+    #tbh1 {
+        font-size: 48px;
+        margin-bottom: 8%;
+        margin-top: 8%;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
 
     #tbh1 {
         font-size: 28px;
@@ -106,4 +127,46 @@ h2 {
         background-size: cover;
     }
 
+}
+
+@media screen and (max-width: 420px) {
+
+    #tbh1 {
+        font-size: 28px;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+    
+    #harry, #ron, #hermione, #draco, #bellatrix, #voldemort {
+        height: 60px;
+        width: 60px;
+        top: 12px;
+        left: 12px;
+    }
+
+    #pharry, #pron, #phermione, #pdraco, #pbellatrix, #pvoldemort {
+        width: 88px;
+        height: 88px;
+    }
+
+    #p1, #p3, #p5, #p7, #p9, #p11 {
+        font-size: 8px;
+        top: 1px;
+    }
+
+    #p2, #p4, #p6, #p8, #p10, #p12 {
+        font-size: 8px;
+        bottom: 1px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    body {
+        background-image: url("../images/hogwartsmp.png");
+        background-size: cover;
+    }
 }
