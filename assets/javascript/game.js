@@ -8,7 +8,7 @@ $(document).ready(function(){
             charName: "Ron", 
             attackPower: 7, 
             counterAttackPower: 12, 
-            healthPoints: 115
+            healthPoints: 120
         },
 
         {
@@ -22,7 +22,7 @@ $(document).ready(function(){
             charName: "Hermione", 
             attackPower: 8, 
             counterAttackPower: 12, 
-            healthPoints: 110
+            healthPoints: 115
         },
 
         {
